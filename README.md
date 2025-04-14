@@ -64,7 +64,7 @@ for shape in shapes:
     print(f"Площадь: {calculate_area(shape):.2f}")
 ```
 
-## 🧪 Тестирование
+## Тестирование
 
 Запуск тестов:
 
