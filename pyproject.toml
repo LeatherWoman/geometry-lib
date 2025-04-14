@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geometry-lib"
+version = "0.2.0"
+description = "Library for calculating areas of geometric shapes"
+authors = [{name = "LeatherWoman", email = "kostya_chernevich@mail.ru"}]
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries",
+]
+
+[project.urls]
+Homepage = "https://github.com/LeatherWoman/geometry-lib"
+Repository = "https://github.com/LeatherWoman/geometry-lib"
+Issues = "https://github.com/LeatherWoman/geometry-lib/issues"
+
+[project.optional-dependencies]
+test = ["pytest>=7.0", "pytest-cov>=3.0"]
+dev = ["black", "flake8", "mypy", "typing-extensions>=4.0.0","numpy>=1.21"]
