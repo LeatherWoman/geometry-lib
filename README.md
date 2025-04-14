@@ -7,18 +7,20 @@
 
 Библиотека для вычисления площадей геометрических фигур с поддержкой различных операций.
 
-## 📦 Установка
+## Установка
 
 Установите библиотеку через pip:
 
 ```bash
 pip install git+https://github.com/LeatherWoman/geometry-lib.git
+```
 Или для разработки:
 
+```bash
 git clone https://github.com/LeatherWoman/geometry-lib.git
 cd geometry-lib
 pip install -e .[test,dev]
-
+```
 ## Возможности
 
 Вычисление площади круга по радиусу
@@ -35,6 +37,7 @@ pip install -e .[test,dev]
 
 Базовый пример
 
+```python
 from geometry_lib import Circle, Triangle
 
 circle = Circle(5)
@@ -43,9 +46,11 @@ print(f"Площадь круга: {circle.area:.2f}")
 triangle = Triangle(3, 4, 5)
 print(f"Площадь треугольника: {triangle.area:.2f}")
 print(f"Прямоугольный: {triangle.is_right_angled()}")
+```
 
 Использование фабрики
 
+```python
 from geometry_lib import ShapeFactory, calculate_area
 
 shapes = [
@@ -57,18 +62,23 @@ shapes = [
 for shape in shapes:
     print(f"Тип: {type(shape).__name__}")
     print(f"Площадь: {calculate_area(shape):.2f}")
+```
 
 ## 🧪 Тестирование
 
 Запуск тестов:
 
+```bash
 pytest -v
+```
 
 Проверка стиля кода:
 
+```bash
 flake8 geometry_lib
 black --check geometry_lib
 mypy geometry_lib
+```
 
 ## Как добавить новую фигуру
 
@@ -78,6 +88,7 @@ mypy geometry_lib
 
 Реализуйте обязательные методы:
 
+```python
 from typing_extensions import override
 from .base import Shape
 
@@ -93,6 +104,7 @@ class NewShape(Shape):
     @override
     def is_right_angled(self) -> bool:
         # Проверка на прямоугольность
+```
 
 ## Лицензия
 
